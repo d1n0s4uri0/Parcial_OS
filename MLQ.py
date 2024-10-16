@@ -278,10 +278,12 @@ def guardar_procesos_en_txt(nombre_archivo, procesos):
         
 
 #colas recibidas por el planificador MLQ
+#si se desea cambiar las colas editar esta lista con las colas deseadas
 colas = [Cola('RR', quantum=3), Cola('RR', quantum=5), Cola('FCFS')]
 planificador = PlanificadorMLQ(colas)
 
-#lista de procesos a ejecutar por el planificador MLQ 
+#lista de procesos a ejecutar por el planificador MLQ recibe la ruta donde se encuentra el archivo con las entradas si se desea cambiar las
+#entradas reemplazar la ruta con un archivo con las entradas deseadas
 procesos = leer_txt('C:/Users/jjp28/Desktop/parcial OS/mlq001.txt')
 
 #seccion que añade los procesos al planificador MLQ 
